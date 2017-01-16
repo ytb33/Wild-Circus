@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Wild Circus</title>
+        <link rel="stylesheet" href="style.css" />
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    </head>
+
+    <body>
+<header>
+    <!-- haut de page -->
+    <h1>Wild Circus</h1>
+</header>
+<nav class="nav">    <!-- barre de nav et banniere -->
+
+<div id="banniere">
+<img src="http://www.icone-gif.com/gif/personnages/clown/clown037.gif" class="clown">
+    <ul>
+        <li><a href="index.html">Wild Circus</a></li>
+        <li><a href=#article1 data-scrolltime="3000">Shows</a></li>
+        <li><a href=#footinfos data-scrolltime="4000">Contact us</a></li>
+    </ul>
+<img src="http://www.icone-gif.com/gif/fetes/cirque/f_cirque07.gif" class="elephant"></p>
+</div>
+</nav>
+<!--Essai -->
+
+<!--fin essai -->
+
+    <!-- articles -->
+<div class="article1"  id="article1">
+<p><strong>Boinz the clown: </strong>
+Let me introduce you Boinz the clown, an eccentric character who will make you return into childhood.
+Slapsticks, balloons and other cream pies will all be there for your greatest happiness and inevitably provoke you hilarity
+</p></div>
+<div class="article2">
+<p><strong>Our chinese acrobats: </strong>
+ This breathtaking show performed twice a day, with its precise and daring action is the most popular acrobatic show in Beijing. The Chinese have developed their acrobatic skills for years and this show is a landmark of the evolution of acrobatics in China.
+</p></div>
+<div class="article3">
+<p><strong>Our contortionists: </strong>
+Flexibility is here the master word, our groups of contortionists will make you the head spin. Their performance include amazing handstands, unbelievable moves such as triple fold, and marinelli bend (considered to be one of the most difficult and dangerous contortion positions). 
+</p></div>
+
+
+<footer>
+    <!-- bas de page -->
+        <footer>
+        <div class="container">
+          <div class="row">
+            <div class="footabout">
+              <h3>About Wild Circus</h3>
+              <div>Around the world since 1883</div>
+            </div>
+            <div class="footinfos" id="footinfos">
+              <h3>Get Informed</h3>
+              <div>Booking - Touring Shows - Events</div>
+              <form action="" class="form-inline">
+                <input type="text" class="input-large" placeholder="Email">
+                <button type="submit" class="btn  btn-info">Subscribe</button></br>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="span12">
+              <div><small>Copyright 2017 - Wild Circus - All rights reserved </small></div>
+                          </div>
+          </div>
+        </div>
+    </footer>
+</footer>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="navscroll/jquery.navScroll.js"></script>
+  <script>
+    var $scrollStatus = $('.scroll-status');
+
+    $('.nav').navScroll({
+      mobileDropdown: true,
+      mobileBreakpoint: 768,
+      scrollSpy: true,
+      onScrollStart: function() {
+        $scrollStatus.show();
+        $scrollStatus.text('Started scrolling');
+      },
+      onScrollEnd: function() {
+        $scrollStatus.text('Scrolling ended');
+        setTimeout(function() {
+          $scrollStatus.fadeOut(200);
+        }, 1000);
+      }
+    });
+
+    $('.click-me').navScroll({
+      navHeight: 0
+    });
+
+    $('.nav').on('click', '.nav-mobile', function (e) {
+      e.preventDefault();
+      $('.nav ul').slideToggle('fast');
+    });
+  </script>
+
+</body>
+</html>
